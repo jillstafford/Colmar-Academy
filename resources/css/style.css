@@ -1,3 +1,96 @@
-.container1 {
-  border: 2px solid black;
+/*page styles*/
+a {
+  text-decoration: none;
+  color: inherit;
 }
+
+body {
+  font-family: Arial;
+  font-size: 18px;
+  color: hsl(0, 2%, 33%);
+}
+
+/*container 1 design*/
+.container1 {
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  z-index: 1;
+  background-color: white;
+  width: 100%;
+  /*border-bottom: 2px solid hsl(0, 2%, 33%);*/
+}
+
+.logoname {
+  margin-left: 24px;
+  height: 32px;
+  align-items: center;
+  display: flex;
+}
+
+.menu {
+  display: inline-flex;
+  margin-right: 16px;
+  height: 64px;
+  align-items: center;
+}
+
+.spacer {
+  padding-right: 8px;
+  padding-left: 8px;
+  background-color: hsl(188, 72%, 75%);
+  height: inherit;
+}
+
+/*container 2*/
+.container2 {
+  width: 100%;
+  background-color: hsl(0, 0%, 70%);
+  position: relative;
+  top: 64px;
+  display: inline-flex;
+}
+
+.imgcontent {
+  width: 60%;
+  margin: 1.75rem 1.4rem;
+  display: inline-block;
+
+}
+.container2a {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.container2a h1 {
+  font-size: 3rem;
+  font-weight: 900;
+  padding-bottom: 1.5rem;
+  line-height: 4rem;
+}
+
+.container2 h2 {
+  font-size: 2rem;
+  padding-bottom: 3rem;
+  line-height: 2.5rem;
+}
+
+
+.button {
+  background-color: hsl(0, 2%, 33%);
+  color: white;
+  text-align: center;
+  width: 26rem;
+}
+
+.button h2 {
+  padding-top: .4rem;
+  padding-bottom: .4rem;
+}
+
+/*container 3*/
