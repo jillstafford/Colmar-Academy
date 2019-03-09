@@ -5,12 +5,19 @@
     <title>Colmar Academy</title>
     <link rel="stylesheet" href="./resources/css/reset.css" type="text/css">
     <link rel="stylesheet" href="./resources/css/style.css" type="text/css">
+
+    <link rel="icon" href="./resources/images/ColmarFavicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+    crossorigin="anonymous">
   </head>
   <body>
 
 <!--main body content based on 6 containers from top to bottom -->
 <!--navigation area content aka container 1-->
 <div class="container1">
+
   <div class="logoname">
     <img class="logo" src="./resources/images/ic-logo.svg" alt="Colmar Academy Logo">
     <span style="font-weight: 900;">COLMAR</span><span style="color: hsl(0, 0%, 70%);">ACADEMY</span>
@@ -25,7 +32,19 @@
       <li class="spacer"></li>
       <li><a href="#">Sign In</a></li>
     </ul>
-  </nav>
+
+    <!-- navigation menu for mobile -->
+  <div class="mobilenav">
+      <ul class="mobilemenu">
+      <li><a href="#"><img src="./resources/images/ic-logo.svg" alt="Colmar Academy Logo"></a></li>
+      <li><a href="#"><img src="./resources/images/ic-on-campus.svg" alt="Desk Icon representing On Campus Learning"></a></li>
+      <li><a href="#"><img src="./resources/images/ic-online.svg" alt="Computer Icon representing Online Learning"></a></li>
+      <li><a href="#"><img src="./resources/images/ic-login.svg" alt="Login Icon"></a></li>
+      </ul>
+    </div>
+
+ </nav>
+
 </div>
 
 <!--pitch content aka container 2-->
@@ -132,6 +151,35 @@
       <li class="coursenames">Analytics, Content Marketing, Mobile Marketing</li>
     </ul>
   </div>
+  <!-- mobile format requiring buttons instead of lists-->
+  <div class="mobilecourselist">
+    <!--<ul>
+      <li class="mobilelist"><a href="#"><h2>Software Engineering</h2></a></li>
+      <li class="mobilelist"><a href="#"><h2>Computer Art</h2></a></li>
+      <li class="mobilelist"><a href="#"><h2>Design</h2></a></li>
+      <li class="mobilelist"><a href="#"><h2>Data</h2></a></li>
+      <li class="mobilelist"><a href="#"><h2>Business</h2></a></li>
+      <li class="mobilelist"><a href="#"><h2>Marketing</h2></a></li>
+    </ul>-->
+    <div class="button">
+      <h2>Software Engineering</h2>
+    </div>
+    <div class="button">
+      <h2>Computer Art</h2>
+    </div>
+    <div class="button">
+      <h2>Design</h2>
+    </div>
+    <div class="button">
+      <h2>Data</h2>
+    </div>
+    <div class="button">
+      <h2>Business</h2>
+    </div>
+    <div class="button">
+      <h2>Marketing</h2>
+    </div>
+  </div>
 </div>
 </div>
 
@@ -142,7 +190,7 @@
   </div>
 <div class="cont5bottom">
   <div class="leftsectioncontent">
-    <video controls width="764">
+    <video controls width="100%">
       <source src="./resources/video/thesis.mp4" type="video/mp4">
       <p>Sorry, your browser does not support embedded video</p>
     </video>
@@ -178,7 +226,6 @@
      </nav>
   </footer>
 </div>
-
 </div>
 </body>
 </html>

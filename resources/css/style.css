@@ -1,10 +1,14 @@
 /*page styles*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
   font-family: Helvetica;
   font-size: 18px;
   color: hsl(0, 2%, 33%);
-
 }
 
 h1 {
@@ -32,7 +36,7 @@ a:hover {
 /*container 1 design*/
 .container1 {
   height: 3.5rem;
-  display: flex;
+  display: inline-flex;
   justify-content: space-between;
   align-items: center;
   position: fixed;
@@ -41,7 +45,6 @@ a:hover {
   z-index: 1;
   background-color: white;
   width: 100%;
-
 }
 
 .logoname {
@@ -77,9 +80,12 @@ a:hover {
 .imgcontent {
   width: 60%;
   margin: 1.75rem 1.4rem;
-  display: inline-block;
-
+  padding-right: 1.4rem;
+  max-width: 100%;
+  max-height: auto;
+  display: block;
 }
+
 .container2a {
   display: flex;
   flex-direction: column;
@@ -95,7 +101,6 @@ a:hover {
   padding-bottom: 3rem;
   line-height: 2.5rem;
 }
-
 
 .button {
   background-color: hsl(0, 2%, 33%);
@@ -126,7 +131,9 @@ a:hover {
 
 .leftsectioncontent img {
   margin-bottom: 1.75rem;
-  width: auto;
+  max-width: 100%;
+  max-height: auto;
+  display: block;
 }
 
 .leftsectioncontent h1 {
@@ -150,12 +157,13 @@ a:hover {
   display: inline-flex;
   margin-top: 1.75rem;
   align-items: center;
-  max-height:
 }
 
 .rightsidecontainer1 img {
-  width: auto;
-  max-width: 35%;
+  width: 35%;
+  max-width: 100%;
+  max-height: auto;
+  display: block;
   margin: 0 .9rem .9rem .9rem;
 }
 
@@ -186,8 +194,10 @@ a:hover {
 }
 
 .rightsidecontainer3 img {
-  width: auto;
-  max-width: 35%;
+  width: 35%;
+  max-width: 100%;
+  max-height: auto;
+  display: block;
   margin: .9rem .9rem .9rem .9rem;
 }
 
@@ -251,9 +261,8 @@ a:hover {
   display: inline-flex;
   flex-flow: wrap;
   position: relative;
-  top: 3.7rem;
+  top: 3.5rem;
   width: 100%;
-
 }
 
 .cont5bottom {
@@ -262,14 +271,11 @@ a:hover {
   border-bottom: 1px solid hsl(0, 0%, 90%);
 }
 
-.container6 {
-  position: relative;
-  top: 3.5rem;
-}
-
 .leftsectioncontent .video {
   max-width: 60%;
   padding-bottom: 1.5rem;
+  display: block;
+  max-height: auto;
 }
 
 .leftsectioncontent h1 {
@@ -287,11 +293,10 @@ a:hover {
 }
 
 /*footer container 6*/
-/*.container6 {
-  border: 2px solid red;
-  display: flex;
-  width: 100%;
-}*/
+.container6 {
+  position: relative;
+  top: 3.5rem;
+}
 
 footer {
   display: flex;
@@ -300,9 +305,204 @@ footer {
   justify-content: space-between;
   margin-top: 1rem;
   margin-left: 1.5rem;
-  height: 3rem;
+  height: 3.5rem;
 }
 
 nav span {
   margin-right: 1.5rem;
+}
+
+/* Start media queries */
+
+/* desktop design*/
+@media only screen and (min-width: 960px) {
+  .mobilemenu {
+    display: none;
+  }
+
+  .mobilecourselist {
+    display: none;
+  }
+}
+/*end desktop specific design*/
+
+/*tablet design */
+@media only screen and (max-width:888px) {
+  .logoname {
+    display: none;
+  }
+
+  nav .menu {
+    display: none;
+  }
+
+  .mobilenav {
+    display: flex;
+    width: 880px;
+  }
+
+  .mobilemenu {
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .mobilemenu li {
+    height: 2rem;
+  }
+
+  .mobilecourselist {
+    display: none;
+  }
+  
+}
+
+/* Mobile Design */
+@media only screen and (max-width: 490px) {
+  .logoname {
+    display: none;
+  }
+
+  nav .menu {
+    display: none;
+  }
+
+/*container 1 mobile design */
+  .mobilenav {
+    display: flex;
+    width: 490px;
+  }
+
+  .mobilemenu {
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .mobilemenu li {
+    height: 2rem;
+  }
+
+/*container 2 mobile design*/
+
+  .container2 {
+    flex-direction: column;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .imgcontent {
+    height: auto;
+    margin: 0;
+    width: 100%;
+    padding: 0;
+  }
+
+  .container2a h1 {
+    margin: 1.8rem auto .4rem .75rem;
+  }
+
+  .container2 h2 {
+    margin: 1.4rem auto 1.4rem .75rem;
+  }
+
+  .button {
+    margin: 0 .75rem 1.8rem .75rem;
+    max-width: 100%;
+  }
+
+/* container 3 mobile design*/
+
+  .container3 .leftsectioncontent {
+    display: none;
+  }
+
+  .rightsectioncontent {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid hsl(0, 0%, 90%);
+  }
+
+  .rightsidecontainer1 {
+    flex-wrap: wrap;
+    margin-top: auto;
+    width: 100%;
+    height: auto;
+  }
+
+  .containerlist {
+    width: 100%;
+    margin-bottom: 3.5rem;
+    margin-left: 1.8rem;
+  }
+
+  .rightsidecontainer1 img {
+    margin: 1.5rem .75rem 1.5rem .75rem;
+    width: 100%;
+    max-width: 100%;
+    max-height: auto;
+    display: block;
+  }
+
+  .rightsidecontainer3 {
+    flex-wrap: wrap;
+    background-color: white;
+    width: 100%;
+  }
+
+  .rightsidecontainer3 img {
+    margin: 1.5rem .75rem 1.5rem .75rem;
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    display: block;
+  }
+
+/* container 4 mobile design*/
+
+  .coursecontainer {
+    display: none;
+  }
+
+  .container4 {
+    background-color: white;
+    width: 100%;
+    border-bottom: 1px solid hsl(0, 0%, 90%);
+  }
+
+  .mobilecourselist {
+    width: 100%;
+  }
+
+  .mobilecourselist .button {
+    width: 100%;
+    background-color: hsl(0, 0%, 90%);
+    color: hsl(0, 2%, 33%);
+    text-align: left;
+  }
+
+  .mobilecourselist .button h2 {
+    margin-left: .75rem;
+    padding-top: 1rem;
+    padding-bottom: 1.5rem;
+  }
+
+.mobilecourselist .button:hover {
+  background-color: hsl(209, 59%, 37%);
+  color: white;
+}
+
+/*container 5 mobile design */
+  .cont5bottom h1, p {
+    display: none;
+  }
+
+  .cont5bottom .rightsectioncontent{
+    display: none;
+  }
+
+  .cont5bottom .leftsectioncontent {
+    width: 100%;
+  }
 }
