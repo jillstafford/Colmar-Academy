@@ -27,6 +27,7 @@ a {
 
 a:hover {
   color: hsl(209, 59%, 37%);
+  font-size: 1.5rem;
 }
 
 .button:hover {
@@ -34,7 +35,7 @@ a:hover {
 }
 
 /*container 1 design*/
-.container1 {
+header {
   height: 3.5rem;
   display: inline-flex;
   justify-content: space-between;
@@ -315,7 +316,7 @@ nav span {
 /* Start media queries */
 
 /* desktop design*/
-@media only screen and (min-width: 960px) {
+@media only screen and (min-width: 961px) {
   .mobilemenu {
     display: none;
   }
@@ -327,7 +328,7 @@ nav span {
 /*end desktop specific design*/
 
 /*tablet design */
-@media only screen and (max-width:888px) {
+@media only screen and (min-width:481px)and (max-width:960px) {
   .logoname {
     display: none;
   }
@@ -338,7 +339,8 @@ nav span {
 
   .mobilenav {
     display: flex;
-    width: 880px;
+    min-width: 481px;
+    max-width: 960px;
   }
 
   .mobilemenu {
@@ -354,7 +356,7 @@ nav span {
   .mobilecourselist {
     display: none;
   }
-  
+
 }
 
 /* Mobile Design */
